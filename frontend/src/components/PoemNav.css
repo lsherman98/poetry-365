@@ -1,0 +1,38 @@
+/* App.css */
+
+/* Style for the sidebar container */
+.sidebar {
+    height: 100vh; /* Full height of the viewport */
+    width: 250px; /* Width of the sidebar */
+    background-color: #f2f2f2; /* Background color of the sidebar */
+    position: fixed; /* Fixed position so it stays visible while scrolling */
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+    padding-top: 20px; /* Top padding to separate from the top of the viewport */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for styling */
+}
+
+/* Style for the list inside the sidebar */
+.sidebar ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+/* Style for each list item in the sidebar */
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+}
+
+/* Hover effect for list items */
+.sidebar ul li:hover {
+    background-color: #ddd; /* Background color on hover */
+}
+
+/* Style for the main content area */
+.main-content {
+    margin-left: 250px; /* Adjust margin to account for the sidebar width */
+    padding: 20px; /* Optional: Add padding for content */
+}

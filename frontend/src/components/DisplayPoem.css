@@ -1,0 +1,8 @@
+.heroPoem {
+    margin-left: 250px; /* Adjust margin to account for the sidebar width */
+    padding: 20px; /* Optional: Add padding for content */
+}
+
+.poemContainer {
+    white-space: pre-wrap;
+}
