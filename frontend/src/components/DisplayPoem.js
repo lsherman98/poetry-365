@@ -5,11 +5,12 @@ import PoemPlayer from "./PoemPlayer";
 
 function DisplayPoem() {
     const poem = useSelector((state) => state.poemStore.selectedPoem);
+    const vttUrl = poem.poem_timestamps
 
     return (
         <div className="heroPoem">
-            <p className="poemContainer">{poem.poem}</p>
-            <PoemPlayer poem={poem}  />
+            {/* <p className="poemContainer">{poem.poem}</p> */}
+            <PoemPlayer audioUrl={poem.audio}  vttUrl={vttUrl} />
         </div>
     );
 }
