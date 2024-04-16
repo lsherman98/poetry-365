@@ -142,7 +142,7 @@ function PoemPlayer({ poemText, audioUrl, vttUrl, poem }) {
                         listenInterval={1000}
                         onListen={onListen}
                         onSeeked={onListen}
-                        autoPlayAfterSrcChange={false}
+                        // autoPlayAfterSrcChange={false}
                     />
                 </div>
             </div>
