@@ -20,6 +20,14 @@ const router = createBrowserRouter([
                 path: "/",
                 element: <DisplayPoem />,
             },
+            {
+                path: '/:day',
+                element: <DisplayPoem />
+            },
+            {
+                path: "*",
+                element: <DisplayPoem />
+            }
         ],
     },
 ]);

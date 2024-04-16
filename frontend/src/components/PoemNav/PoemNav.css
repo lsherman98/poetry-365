@@ -34,11 +34,13 @@
 }
 
 .navItemTitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 18px;
 }
 
 .navItemAuthor {
     font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
