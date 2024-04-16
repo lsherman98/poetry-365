@@ -7,21 +7,48 @@ router.route("/").get((req, res) => {
         .catch((err) => res.status(400).json("Error: " + err));
 });
 
+router.route("/today").get((req, res) => {
+    const currentDate = new Date();
+    const dayOfYear = getDayOfYear(currentDate);
+
+    function getDayOfYear(date) {
+        const startOfYear = new Date(date.getFullYear(), 0, 0);
+        const diff = date - startOfYear;
+        const oneDay = 1000 * 60 * 60 * 24;
+        const dayOfYear = Math.floor(diff / oneDay);
+        return dayOfYear + 1; 
+    }
+
+    Poem.findOne({ day: dayOfYear })
+        .then((poem) => res.json(poem))
+        .catch((err) => res.status(404).json("Error: " + err));
+});
+
 router.route("/:id").get((req, res) => {
     const { id } = req.params;
 
     Poem.findById(id)
         .then((poem) => {
             const formattedPoem = poem.poem
-            .replace(/\\n/g, '\n')  
-            .replace(/\\t/g, '\t')  
-            .replace(/\\s/g, '\s');  
+                .replace(/\\n/g, "\n")
+                .replace(/\\t/g, "\t")
+                .replace(/\\s/g, "s");
 
-            poem.poem = formattedPoem
+            poem.poem = formattedPoem;
             res.json(poem);
         })
         .catch((err) => res.status(404).json("Error: " + err));
 });
+
+router.route("/day/:day").get((req, res) => {
+    const { day } = req.params;
+
+    Poem.findOne({ day: day })
+        .then((poem) => res.json(poem))
+        .catch((err) => res.status(404).json("Error: " + err));
+});
+
+
 
 router.route("/").post((req, res) => {
     const { title, year, author, read_by, poem, audio, day } = req.body;

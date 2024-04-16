@@ -1,9 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import poemsReducer from './features/poemSlice'
-
+import poemsReducer from "./features/poemSlice";
 
 export const store = configureStore({
     reducer: {
-        poemStore: poemsReducer
-    }
-})
+        poemStore: poemsReducer,
+    },
+});

@@ -1,14 +1,31 @@
-import React from 'react';
-import PoemNav from './components/PoemNav'
-import DisplayPoem from './components/DisplayPoem';
+import React from "react";
+import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
+import PoemNav from "./components/PoemNav/PoemNav";
+import DisplayPoem from "./components/DisplayPoem";
+
+const Layout = () => {
+    return (
+        <>
+            <PoemNav />
+            <Outlet />
+        </>
+    );
+};
+
+const router = createBrowserRouter([
+    {
+        element: <Layout />,
+        children: [
+            {
+                path: "/",
+                element: <DisplayPoem />,
+            },
+        ],
+    },
+]);
 
 function App() {
-  return (
-    <div className="App">
-      <PoemNav />
-      <DisplayPoem />
-    </div>
-  );
+    return <RouterProvider router={router} />;
 }
 
 export default App;

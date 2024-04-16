@@ -1,0 +1,54 @@
+.infoModalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exitIcon {
+    position: fixed;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    opacity: 50%;
+    transition: opacity 0.5s ease;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.exitIcon:hover {
+    opacity: 100%;
+    transition: opacity 0.5s ease;
+}
+
+.mainModalContent {
+    width: 50%;
+}
+
+.aboutProject {
+    font-size: 24px;
+    color: rgb(121, 121, 121);
+}
+
+.aboutMe {
+    color: rgb(121, 121, 121);
+}
+
+.modalSpan {
+    font-style: italic;
+}
+
+.modalLink {
+    text-decoration: none;
+    color: rgb(85, 85, 85);
+}
+
+.modalLink:hover {
+    color: rgb(36, 128, 189);
+}
