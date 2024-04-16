@@ -32,7 +32,7 @@ function InfoModal({ setShowModal }) {
                                 className="modalLink"
                                 href="https://www.amazon.com/Master-His-Emissary-Divided-Western/dp/0300188374"
                             >
-                                The Master and His Emmisary
+                                The Master and His Emissary
                             </a>
                         </span>{" "}
                         and{" "}
