@@ -50,28 +50,28 @@ router.route("/day/:day").get((req, res) => {
 
 
 
-router.route("/").post((req, res) => {
-    const { title, year, author, read_by, poem, audio, day } = req.body;
+// router.route("/").post((req, res) => {
+//     const { title, year, author, read_by, poem, audio, day } = req.body;
 
-    const formattedPoem = poem
-        .replace(/\\n/g, "\n")
-        .replace(/\\t/g, "\t")
-        .replace(/\\s/g, " ");
+//     const formattedPoem = poem
+//         .replace(/\\n/g, "\n")
+//         .replace(/\\t/g, "\t")
+//         .replace(/\\s/g, " ");
 
-    const newPoem = new Poem({
-        title,
-        year,
-        author,
-        read_by,
-        poem: formattedPoem,
-        audio,
-        day,
-    });
+//     const newPoem = new Poem({
+//         title,
+//         year,
+//         author,
+//         read_by,
+//         poem: formattedPoem,
+//         audio,
+//         day,
+//     });
 
-    newPoem
-        .save()
-        .then(() => res.status(200).json("Poem added!"))
-        .catch((err) => res.status(400).json("Error: " + err));
-});
+//     newPoem
+//         .save()
+//         .then(() => res.status(200).json("Poem added!"))
+//         .catch((err) => res.status(400).json("Error: " + err));
+// });
 
 module.exports = router;
