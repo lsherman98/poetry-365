@@ -8,5 +8,3 @@ On April, 21, 2020, Dr. Iain McGilchrist, author of The Master and His Emissary 
 
 A machine learning model was used to sync up the audio with the text. 
 The UI and backend API was built using Javascript, React, Express, and MongoDB, with AWS as the object store. 
-
-## Contributing
